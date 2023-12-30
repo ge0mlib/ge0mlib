@@ -1,4 +1,19 @@
-<h1 align="center">Marine geophysical data processing toolbox for engineering survey (MatLab & GNU Octave)</h1>
+<h1 align="center">Marine geophysical data processing toolbox for engineering survey (MatLab & GNU Octave) <a href="https://ge0mlib.com/">[home]</a></h1>
 
-- [ge0mlib-General description.pdf](https://ge0mlib.com/g/Docs/01-01_ge0mlib-General%20description.pdf)
-- [ge0mlib homepage](https://ge0mlib.com/)
+## Function sets
+- **gAcad** - Сreate a file with a text script for AutoCAD, which includes elementary shapes and actions: layer creation, zoom, polylines, circles, polygons, text, raster linked to coordinates, wiggle (for drawing magnetic survey results);
+- **gData** - Functions for matrices processing. Originally written in the context of seismic processing (SBP): filtering seismic traces, 2D filtering, averaging over several traces, amplification, normalization, leveling to the bottom (polyline), picking the seismic bottom (drawing a polyline using a raster);
+- **gFields** - Functions for conversion of structures that include a number of rows: merging several structures with different fields into one (excluding identical fields), removing part of a row (same indexes) for all fields, manually removing spikes from a row value. The rows are scalar measurements recorded along the geophysical profile: coordinates, altitude, depth, pitch-roll-heading and others;
+- **gJsf** - JSF-files reading and writing  (Edge Tech format). The format is mainly used to record data from SBP, SSS and interferometers manufactured by Edge Tech. The functions allow you to access most messages: 0080, 0082, 0086, 0181, 0182, 0426, 0428, 2000, 2002, 2020, 2060, 2071, 2080, 2090, 2091, 2100, 2101, 2111, 3000..3005, 3041, 9001..9003;
+- **gKml** - Several functions for creating kml files. Recording to a file: opening-closing tags, points, polylines, polygons, color tag, styles;
+- **gLog** - Reading files with NMEA-similar messages recorded by logger gLog (developed in Free Pascal). Logger adds to each message the time of the first byte received by the computer clock. The ZDA and PPS logs allow linking another logs to the GNSS time;
+- **gMagy** - Several functions for working with magnetic survey data: reading the recording results of the MagLog software (*.gps, *.int, *.mag for single magy and *.mag files for the TVG-frame), modeling fields of dipole and cylinder, drawing wiggles in MatLab graphics, targets picking;
+- **gMap** - Includes two groups of functions. (1) Solving geometric problems on a plane: searching for the minimum distance between sets of points, the minimum distance from a point and a polyline, the point of intersection of polylines, manual picking of spikes for 1D and 2D graphs. (2) Working with a “polyline” type structure: reading and writing for a text file, drawing in MatLab graphics, exporting the structure to an AutoCAD script;
+- **gMbes** - Сurrently includes functions for reading and writing FAU-files;
+- **gNav** -  Coordinate conversion (including Lambert Azimuthal projection, Lambert Conic Conformal, Mercator, Polar Stereographic, Transverse Mercator), time and date format conversion, Tait-Bryan angles, Layback calculation, auxiliary functions;
+- **gP190** - P190 Type_1 (Grid or Geographical coordinates) reading, writing and transformation to “polyline” structure;
+- **gSgy** - Reading and writing Seg-y files. Manipulations with SBP data (including changing Seg-y headers): files concatenation, seismic traces deleting, delay time correction, simple time-depth conversion, resampling and trimming for seismic traces, seismic section saving in Jpeg image format;
+- **gShape** - Several functions for working with shape-structures;
+- **gUhr** - Several functions for HR/UHR logs reading (GeoEel, GeoSense, GunLink2000);
+- **gWfr** - Working with matrix (raster-image file) with world-file applied: reading and writing files, converting between palette and floating point numbers, converting to xyz file, resizing, merging, drawing;
+- **gXtf** - XTF-files reading and writing  (Triton Imaging format). The format is mainly used to record data from SSS. The functions allow you to access to messages 000, 003, 107. Append files, selecred messages deleting.
